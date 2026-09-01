@@ -5,7 +5,7 @@ copyright_years: '2026'
 author: 'Dominic Davis-Foster'
 email: 'dominic@davis-foster.co.uk'
 username: 'domdfcoding'
-version: '0.1.0'
+version: '0.1.0.post1'
 license: 'MIT'
 short_desc: 'Wrapper around the local-ip-address Rust crate to retrieve local IP addresses.'
 
