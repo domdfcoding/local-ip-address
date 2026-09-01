@@ -79,7 +79,7 @@ local-ip-address
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/local-ip-address
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/local-ip-address/v0.1.0.post1
+.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/local-ip-address/v0.1.1
 	:target: https://github.com/domdfcoding/local-ip-address/pulse
 	:alt: GitHub commits since tagged version
 
