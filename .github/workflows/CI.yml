@@ -33,14 +33,24 @@ jobs:
             container: quay.io/pypa/manylinux2014_x86_64:2026.05.02-2
           - runner: ubuntu-22.04
             target: x86
+            manylinux: auto
+            container: auto
           - runner: ubuntu-22.04
             target: aarch64
+            manylinux: auto
+            container: auto
           - runner: ubuntu-22.04
             target: armv7
+            manylinux: auto
+            container: auto
           - runner: ubuntu-22.04
             target: s390x
+            manylinux: auto
+            container: auto
           - runner: ubuntu-22.04
             target: ppc64le
+            manylinux: auto
+            container: auto
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
