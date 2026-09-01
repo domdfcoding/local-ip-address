@@ -112,3 +112,18 @@ To install with ``pip``:
 	$ python -m pip install local-ip-address
 
 .. end installation
+
+
+Usage
+--------------
+
+``local_ip_address.local_ip() -> ipaddress.IPv4Address``
+===========================================================
+
+Retrieves the local IPv4 address of the machine in the local network.
+
+
+``local_ip_address.local_ipv6() -> ipaddress.IPv6Address``
+===========================================================
+
+Retrieves the local IPv6 address of the machine in the local network.
