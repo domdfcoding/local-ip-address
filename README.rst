@@ -9,14 +9,12 @@ local-ip-address
 .. end short_desc
 
 
-.. start shields
-
 .. list-table::
 	:stub-columns: 1
 	:widths: 10 90
 
 	* - Tests
-	  - |actions_linux| |actions_windows| |actions_macos| |coveralls|
+	  - |actions_linux| |actions_windows| |actions_macos|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -96,7 +94,6 @@ local-ip-address
 	:target: https://pypistats.org/packages/local-ip-address
 	:alt: PyPI - Downloads
 
-.. end shields
 
 Installation
 --------------
