@@ -1,0 +1,83 @@
+[build-system]
+requires = [ "maturin<2.0,>=1.10",]
+build-backend = "maturin"
+
+[project]
+name = "local-ip-address"
+version = "0.0.0"
+description = "Wrapper around the local-ip-address Rust crate to retrieve local IP addresses."
+readme = "README.rst"
+requires-python = ">=3.8"
+keywords = []
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Rust",
+    "Typing :: Typed",
+]
+dependencies = []
+dynamic = []
+
+[project.license]
+file = "LICENSE"
+
+[[project.authors]]
+name = "Dominic Davis-Foster"
+email = "dominic@davis-foster.co.uk"
+
+[project.urls]
+Homepage = "https://github.com/domdfcoding/local-ip-address"
+"Issue Tracker" = "https://github.com/domdfcoding/local-ip-address/issues"
+"Source Code" = "https://github.com/domdfcoding/local-ip-address"
+
+[tool.whey]
+base-classifiers = [ "Programming Language :: Rust", "Typing :: Typed",]
+python-versions = [ "3.8", "3.9", "3.10", "3.11", "3.12", "3.13",]
+python-implementations = [ "CPython",]
+platforms = [ "Windows", "macOS", "Linux",]
+license-key = "MIT"
+package = "local_ip_address"
+
+[tool.importcheck]
+always = [ "local_ip_address",]
+
+[tool.mypy]
+python_version = "3.9"
+namespace_packages = true
+check_untyped_defs = true
+warn_unused_ignores = true
+no_implicit_optional = true
+show_error_codes = true
+
+[tool.dependency-dash."requirements.txt"]
+order = 10
+
+[tool.dependency-dash."tests/requirements.txt"]
+order = 20
+include = false
+
+[tool.snippet-fmt]
+directives = [ "code-block",]
+
+[tool.snippet-fmt.languages.python]
+reformat = true
+
+[tool.snippet-fmt.languages.TOML]
+reformat = true
+
+[tool.snippet-fmt.languages.ini]
+
+[tool.snippet-fmt.languages.json]
+
+[tool.maturin]
+python-source = "python"
+module-name = "local_ip_address._local_ip_address"
