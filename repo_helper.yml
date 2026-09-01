@@ -30,6 +30,3 @@ exclude_files:
 
 tox_unmanaged:
   - testenv:build
-
-sphinx_conf_epilogue:
-  - nitpicky = True
