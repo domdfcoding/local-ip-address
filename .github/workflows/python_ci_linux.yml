@@ -75,35 +75,3 @@ jobs:
           name: "coverage-${{ matrix.config.python-version }}"
           path: .coverage
           include-hidden-files: true
-
-
-  Deploy:
-    needs: tests
-    permissions:
-      actions: write
-      issues: write
-      contents: read
-    runs-on: "ubuntu-22.04"
-    steps:
-      - name: Checkout 🛎️
-        uses: "actions/checkout@v6"
-        if: startsWith(github.ref, 'refs/tags/')
-
-      - name: Setup Python 🐍
-        uses: "actions/setup-python@v6"
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          python-version: 3.8
-
-      - name: Install dependencies 🔧
-        if: startsWith(github.ref, 'refs/tags/')
-        run: |
-          python -m pip install --upgrade pip setuptools wheel
-
-      - name: Close milestone 🚪
-        if: startsWith(github.ref, 'refs/tags/')
-        run: |
-          python -m pip install --upgrade github3.py packaging
-          python .github/milestones.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
